@@ -4,7 +4,7 @@ Chat bots are becoming a popular way to interact with customers. In any business
 
 [IBM Security Verify](https://www.ibm.com/verify/verify-identity) protects users and applications with a cloud-native, software-as-a-service (SaaS) approach that leverages the cloud. Beyond single-sign on and multifactor authentication, Verify is a modernized, modular IDaaS that provides deep AI-powered context for [risk based authentication and adaptive access](https://www.ibm.com/verify/verify-identity/adaptive-access). IBM Security Verify provides a centralized user management interface that can be managed through the admin UI or automatically through REST APIs. It is built upon open standards such as OpenID Connect and SAML 2.0. There are a number of multifactor verification methods available out-of-the-box like SMS, Email, Voice callback one-time passcode, Push notification approval, Knowledge questions and so on. This code pattern uses the single-sign on authentication and email based multifactor verification method.
 
-This code pattern demonstrates a use case in retail domain where customers can create their account by registering to the application and then place order for the items. Later, if they want to check their orders, cancel the order then this facility is provided through chatbot. Chatbot is integrated with the webapp and avoid the hassle of login into the app to check your order. Though user does not need to login to start conversation with chatbot but with the help of security verify user's identity is validated by verifying email-id and the one time code sent by security verify. Once the identity is validated, the chatbot allows user to communicate further regarding their orders.
+This code pattern demonstrates a scenario of retail domain where customers can create their account by registering to the application and then place order for the items. Later, if they want to check their orders, cancel the order then this facility is provided through chatbot. Chatbot is integrated with the webapp and avoid the hassle of login into the app to check your order. Though user does not need to login to start conversation with chatbot but with the help of security verify user's identity is validated by verifying email-id and the one time code sent by security verify. Once the identity is validated, the chatbot allows user to communicate further regarding their orders.
 
 The code pattern explains the following:
 * Add SSO to a java based webapp
@@ -18,7 +18,7 @@ The code pattern explains the following:
 
 - [IBM Cloud account](https://cloud.ibm.com/)
 - [Red Hat OpenShift cluster](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift) to deploy webapp.
-- [IBM Security Verify Account](https://www.ibm.com/verify/verify-identity) - Trial login can be used for this code pattern.
+- [IBM Security Verify SaaS Tenant](https://www.ibm.com/verify/verify-identity) - Trial login can be used for this code pattern.
 - [Git client](https://git-scm.com/downloads)
 - [The OpenShift CLI (oc)](https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli)
 
@@ -27,8 +27,10 @@ The code pattern explains the following:
 1. [Clone the repository](#1-clone-the-repository)
 2. [Create IBM Cloud Services instances](#2-create-ibm-cloud-services)
 3. [Configuration of services](#3-configuration-of-services)
-4. [Deploy Application](#4-deploy-application)
-5. [Access the Application](#5-access-the-application)
+4. [Create Cloud Functions Action](#4-create-cloud-functions-action)
+5. [Setup Watson Assistant Chatbot](#5-setup-watson-assistant-chatbot)
+6. [Deploy Application](#6-deploy-application)
+7. [Access the Application](#7-access-the-application)
 
 ### 1. Clone the repository
 
@@ -61,6 +63,25 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 #### 2.3 Create Watson Assistant Service instance
 
+### 4. Create Cloud Functions Action
+
+Login to your IBM Cloud account. On the dashboard, click on the hamburger menu and navigate to `Functions` and click on `Actions`.
+
+Click the `Create` button to create a new action. 
+Enter a name for action under `Action Name`. Leave `Enclosing Package` as `(Default Package)` itself. Under `Runtime` select option for Node.js.
+
+Click on `Create` button. You are presented with actions code editor. Replace the existing code with the javascript code [here]().
+
+Next, in the javascript code, update the value of variables `legacy_app_url` (you will find it in the beginning of the file) to the `changeplan` url. The `changeplan` url will be http://app-legacy-xxxx.mybluemix.net/telecom/apis/changeplan.
+>Note: the base url http://app-legacy-xxxx.mybluemix.net was noted in the legacy application setup 
+
+Click `Save` button on the top right of the code editor. 
+
+#### Enable cloud function action as web action
+
+For the action just created, click `Endpoints` on the left side navigation menu. Select the checkbox `Enable as Web Action`. Click the `Save` button on the right top corner. When saved, `Copy web action url` icon, under `Web Action` section is enabled. Click the icon to copy the webhook url. This URL will be used in Watson Assistant for it to call the actions in Cloud Functions.
+
+![Webhook URL](images/webhook-url.png)
 ## Summary
 
 ## License
