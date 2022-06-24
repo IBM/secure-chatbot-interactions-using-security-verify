@@ -57,7 +57,7 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 ![create_db2_credential](images/create_db2_credential.png)
 
-**Note the username, password, host and port of the DB2 instance. The will be needed for configuring Insurance Portal Application, Watson Knowledge Catalog and Watson Query**
+**Note the username, password, host and port of the DB2 instance. The will be needed for configuring ECommerce Portal Application, Watson Knowledge Catalog and Watson Query**
 
 ![note_credential](images/note_credential.png)
 
@@ -87,7 +87,7 @@ Please follow the instructions [here](SECURITY_VERIFY_CONFIG.md) to configure Se
 
 Login to your OpenShift cluster. Access the `IBM Cloud Dashboard > Clusters (under Resource Summary) > click on your OpenShift Cluster > OpenShift web Console`. Click the dropdown next to your username at the top of the OpenShift web console and select Copy Login Command. Select Display Token and copy the oc login command from the web console and paste it into the terminal on your workstation. Run the command to login to the cluster using `oc` command line.
 
-#### 4.1 Configure Insurance Portal Service
+#### 4.1 Configure ECommerce Portal Service
 
 **4.1.1 Changes to server.xml**
 
