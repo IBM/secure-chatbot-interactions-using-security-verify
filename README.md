@@ -20,19 +20,28 @@ The code pattern explains the following:
 
 ## Flow
 
+![Architecture](images/architecture.png)
+
+1. An user accesses the E-Commerce portal app.
+2. The user registers on the portal using IBM Security Verify and subsequently logs in.
+3. After login, the user can shop for merchandise, and the transactions are stored in database.
+4. Later, user accesses chatbot to check order status or cancel the order without logging into the app.
+5. Chatbot verifies the user identity with the help of security verify using the user's registered email id.
+6. Once user's identity is verified, chatbot communicates with the e-commerce portal app via REST APIs for the required action.
+
 ## Pre-requisites
 
 - [IBM Cloud account](https://cloud.ibm.com/)
 - [Red Hat OpenShift cluster](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift) to deploy webapp.
 - [IBM Security Verify SaaS Tenant](https://www.ibm.com/verify/verify-identity) - Trial login can be used for this code pattern.
 - [Git client](https://git-scm.com/downloads)
-- [The OpenShift CLI (oc)](https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli)
+- [OpenShift CLI (oc)](https://cloud.ibm.com/docs/openshift?topic=openshift-openshift-cli)
 
 ## Steps
 
 1. [Clone the repository](#1-clone-the-repository)
 2. [Create IBM Cloud Services](#2-create-ibm-cloud-services)
-3. [Configuration of services](#3-configuration-of-services)
+3. [Configure Security Verify](#3-configure-security-verify)
 4. [Deploy E-Commerce Portal Application](#4-deploy-e-commerce-portal-application)
 5. [Create Cloud Functions Action](#5-create-cloud-functions-action)
 6. [Setup Watson Assistant Chatbot](#6-setup-watson-assistant-chatbot)
@@ -82,9 +91,7 @@ Go to this [link](https://cloud.ibm.com/kubernetes/catalog/create?platformType=o
 Make a note of the `Ingress Subdomain URL`:
 ![ingress](images/ingress_subdomain.png)
 
-### 3. Configuration of services
-
-#### 3.1 Configure Security Verify
+### 3. Configure Security Verify
 
 Please follow the instructions [here](SECURITY_VERIFY_CONFIG.md) to configure Security Verify.
 
@@ -239,20 +246,28 @@ For the action just created, click `Endpoints` on the left side navigation menu.
 
 Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Resource List`. Click on the Watson Assistant instance that you created earlier. Then click on `Launch Watson Assistant` button to launch Watson Assistant dashboard.
 
-On the Watson Assistant dashboard, on the left side of the screen click on `skills` icon. Click `Create skill` button. Select `Dialog skill` and click `Next`. 
-
-Select `Upload skill` tab. The skill file is available [here](). Click `Drag and drop file here or click to select a file` and select the skill file from your cloned Github Repo folder. Click `Upload`.
-
-The dialog skill should be imported now. Next, click `Options` on left navigation menu for the skill. `Webhooks` under `Options` is selected by default. On this page under `URL`, enter the Webhook url you copied in the above section and append the URL with `.json`.
-**Note: Append the url with .json extension. Without the extension, functions won't be called**
-The entered details are saved automatically.
-
-Next, click `Assistants` option available on the top left side of the Watson Assistant dashboard. Click `Create assistant`. In `Create Assistant` window, under `Name` enter a name for the assistant. Optionally enter a description and click the `Create assistant` button. 
-
-In the next window, click `Add an action or dialog skill`. In `Add Actions or Dialog skill` click on the skill that you created earlier.
+- In the Watson Assistant home page, click `skills` option on the left menu options.
+> If you do not see skills icon, then the Watson assistant view could be for the new experience UI. For this code pattern, we will use the classic view and hence switch to classic view by navigating to `manage` (user icon on top right corner) and clicking `Switch to classic experience`.
+- Click `Create skill` button, then click `Dialog skill` tile. Click `Next`.
+- Select `Upload skill` tab. Drag and drop or browse to select the file in <cloned repo>/sources/chatbot/dialog/bot-dialog.json. Click `Upload`.
+- On the left navigation links click `Options`->`Webhooks` on the left hand navigation.
+- In `URL` text field, enter the REST API endpoint as noted in step 5 and append it with .json. It should look something like this
+	```
+	https://eu-gb.functions.appdomain.cloud/api/v1/web/.../default/Make%20DB%20Calls.json
+	```
+- Click `Assistants` icon on the top left corner of Watson Assistant screen
+- Click `Create assistant`.
+- Give a name for your assistant, optionally enter a description and click `Create assistant`.
+- On the just created Assistant screen, click the `Preview` button. Make a note of `integrationID`, `serviceInstanceID` and `region`from the link provided under the section `Share this link`.
+- Close the window using the `x` button placed just below the user icon on the top right corner.
+- In Assistants page, under `Integrations` section (bottom right corner of the screen), click `Integrate web chat`.
+- Click on `Create` button.
+- Click on `Embed` tab. Copy and save the `script` in a text file. In this script, you will need to update `integrationID`, `serviceInstanceID` and `region` as noted from Preview link earlier.
+- This code snippet will be used in the E-commerce Portal UI.
 
 ### 7. Access the Application
 
+Access the app using the link noted in step 4.2. 
 
 ## Summary
 
