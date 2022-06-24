@@ -65,7 +65,7 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 * Login to IBM Cloud, in [IBM Cloud Catalog](https://cloud.ibm.com/catalog) search of Assistant and create a Watson Assistant service by selecting the **Lite** plan and clicking on **Create**.
 
-![](./images/watson-assistant.png)
+![](./images/watson-assistant1.png)
 
 * Click **Launch Watson Assistant** to launch console.
 
@@ -103,7 +103,7 @@ Click `Save` button on the top right of the code editor.
 
 For the action just created, click `Endpoints` on the left side navigation menu. Select the checkbox `Enable as Web Action`. Click the `Save` button on the right top corner. When saved, `Copy web action url` icon, under `Web Action` section is enabled. Click the icon to copy the webhook url. This URL will be used in Watson Assistant for it to call the actions in Cloud Functions.
 
-![Webhook URL](images/webhook-url.png)
+![Webhook URL](images/action-url.png)
 
 ### 6. Setup Watson Assistant Chatbot
 
@@ -111,7 +111,7 @@ Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Res
 
 On the Watson Assistant dashboard, on the left side of the screen click on `skills` icon. Click `Create skill` button. Select `Dialog skill` and click `Next`. 
 
-Select `Upload skill` tab. The skill file is available if your cloned GitHub repo in the path `app-modernization-coexistence-layer/sources/chatbot/dialog.json`. Click `Drag and drop file here or click to select a file` and select the skill file. Click `Upload`.
+Select `Upload skill` tab. The skill file is available [here](). Click `Drag and drop file here or click to select a file` and select the skill file from your cloned Github Repo folder. Click `Upload`.
 
 The dialog skill should be imported now. Next, click `Options` on left navigation menu for the skill. `Webhooks` under `Options` is selected by default. On this page under `URL`, enter the Webhook url you copied in the above section and append the URL with `.json`.
 **Note: Append the url with .json extension. Without the extension, functions won't be called**
