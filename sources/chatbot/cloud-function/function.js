@@ -13,14 +13,14 @@ var axios = require('axios');
 var qs = require('qs');
 
 //Security Verify Details
-var tenant_url = "xxxx.verify.ibm.com";
-var client_id = 'xxxx';
-var client_secret = "xxxx";
+var tenant_url = "shikham.verify.ibm.com";
+var client_id = 'b06dad03-5204-4df8-b59f-deac810c8b82';
+var client_secret = "WwY7avA2Xt";
 
 //API Details
-var GET_ACTIVE_ORDERS_URL='http://<openshift_url>/portal/ecomm/auth/getactiveorders';
-var GET_ALL_ORDERS_URL = 'http://<openshift_url>/portal/ecomm/auth/getorders';
-var CANCEL_ORDER_URL = 'http://<openshift_url>/portal/ecomm/auth/cancelorder';
+var GET_ACTIVE_ORDERS_URL='http://ecomm-portal-chatbot.cp-india-q3-f2c6cdc6801be85fd188b09d006f13e3-0000.jp-tok.containers.appdomain.cloud/portal/ecomm/auth/getactiveorders';
+var GET_ALL_ORDERS_URL = 'http://ecomm-portal-chatbot.cp-india-q3-f2c6cdc6801be85fd188b09d006f13e3-0000.jp-tok.containers.appdomain.cloud/portal/ecomm/auth/getorders';
+var CANCEL_ORDER_URL = 'http://ecomm-portal-chatbot.cp-india-q3-f2c6cdc6801be85fd188b09d006f13e3-0000.jp-tok.containers.appdomain.cloud/portal/ecomm/auth/cancelorder';
 
 
 async function main(params) {
@@ -73,7 +73,9 @@ async function main(params) {
         }
         var response = await list_active_orders(access_token, emailID);
         console.log(response);
-        if (response.Orders != null) {
+        let arr = [];
+        arr = response.Orders;
+        if (arr.length != 0) {
             var output = await format_response(response.Orders);
             return(output);
         } else {
@@ -87,7 +89,9 @@ async function main(params) {
         }
         var response = await list_all_orders(access_token, emailID);
         console.log(response);
-        if (response.Orders != null) {
+        let arr = [];
+        arr = response.Orders;
+        if (arr.length != 0) {
             var output = await format_response(response.Orders);
             return(output);
         } else {
@@ -307,4 +311,3 @@ format_response = async (orders_arr) => {
         }
         return ({"Orders": items_arr});
 }
-
