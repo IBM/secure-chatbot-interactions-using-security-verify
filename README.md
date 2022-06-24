@@ -82,12 +82,12 @@ Make a note of the `Ingress Subdomain URL`:
 
 Please follow the instructions [here](SECURITY_VERIFY_CONFIG.md) to configure Security Verify.
 
-### 4. Deploy ECommerce Portal Application
+### 4. Deploy E-Commerce Portal Application
 **Login to your OpenShift cluster from command line**
 
 Login to your OpenShift cluster. Access the `IBM Cloud Dashboard > Clusters (under Resource Summary) > click on your OpenShift Cluster > OpenShift web Console`. Click the dropdown next to your username at the top of the OpenShift web console and select Copy Login Command. Select Display Token and copy the oc login command from the web console and paste it into the terminal on your workstation. Run the command to login to the cluster using `oc` command line.
 
-#### 4.1 Configure ECommerce Portal Service
+#### 4.1 Configure E-Commerce Portal Service
 
 **4.1.1 Changes to server.xml**
 
@@ -141,7 +141,7 @@ apiClientId=
 apiClientSecret=
 ```
 
-**4.1.4 Embed chatbot on the home page of the Insurance Portal Application**
+**4.1.4 Embed chatbot on the home page of the E-Commerce Portal Application**
 
 In the cloned repo folder - go to `src/main/resources`. Open `home.html`. 
 Embed the chatbot script element before the closing`body` tag.
@@ -165,7 +165,7 @@ Embed the chatbot script element before the closing`body` tag.
 		});
 </script>
 ```
-#### 4.2 Deploy ECommerce Portal Service
+#### 4.2 Deploy E-Commerce Portal application
 On the terminal window, got to the repository folder that we cloned earlier. 
 Go to the directory - `sources/ins-portal-app/src/main/java/com/example/legacy/ecomm/`.
 Open the file `ECommAppEndpoint.java`.
@@ -176,7 +176,7 @@ private static String ingressSubDomain = "ecomm-portal-chatbot.{{ingress-sub-dom
 ```
 
 Now change directory to `/sources/ecomm-portal` in the cloned repo folder.
-Run the following commands to deploy `ECommerce Portal application`.
+Run the following commands to deploy `E-Commerce Portal application`.
 ```
 oc new-project chatbot
 mvn clean install
@@ -191,7 +191,7 @@ Ensure that the application is started successfully using the command `oc get po
 
 In this step, we will create two tables in the Db2 database - CUSTOMER and ORDERS table.
 
-Invoke the URL - http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/insportal/app/setupdb
+Invoke the URL - http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/portal/ecomm/setupdb
 
 >Note: Replace {{IngressSubdomainURL}} with `Ingress subdomain` of the OpenShift cluster.
 
