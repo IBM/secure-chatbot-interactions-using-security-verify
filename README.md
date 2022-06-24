@@ -256,6 +256,10 @@ In the next window, click `Add an action or dialog skill`. In `Add Actions or Di
 
 ## Summary
 
+In this code pattern you saw how to enable single sign-on for a web application, and also chatbot integration with Identity and Access Management using IBM Security Verify. Both businesses and customers find it convenient to communicate using a conversational chatbot. Ascertaining customer identity in a chatbot conversation becomes all the more important. Hope you enjoyed this code pattern!
+
+For more information on extending the security aspects for your applications using Security Verify, refer to this [link](https://docs.verify.ibm.com/verify/docs/).
+
 ## License
 This code pattern is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
