@@ -103,7 +103,7 @@ Click `Save` button on the top right of the code editor.
 
 For the action just created, click `Endpoints` on the left side navigation menu. Select the checkbox `Enable as Web Action`. Click the `Save` button on the right top corner. When saved, `Copy web action url` icon, under `Web Action` section is enabled. Click the icon to copy the webhook url. This URL will be used in Watson Assistant for it to call the actions in Cloud Functions.
 
-![Webhook URL](images/webhook-url.png)
+![Webhook URL](images/action-url.png)
 
 ### 6. Setup Watson Assistant Chatbot
 
