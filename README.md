@@ -65,7 +65,7 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 * Login to IBM Cloud, in [IBM Cloud Catalog](https://cloud.ibm.com/catalog) search of Assistant and create a Watson Assistant service by selecting the **Lite** plan and clicking on **Create**.
 
-![](./images/watson-assistant.png)
+![](./images/watson-assistant1.png)
 
 * Click **Launch Watson Assistant** to launch console.
 
