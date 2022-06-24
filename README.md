@@ -55,8 +55,6 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 - Click the newly created db2 entry in [IBM Cloud Resource list](https://cloud.ibm.com/resources)
 - Click `Service credentials` on the left hand side navigation menu. If there are no credentials, then click on `New credential` button and create new credentials. 
 
-Select `Service credentials` and click on `New Credential`.
-
 ![create_db2_credential](images/create_db2_credential.png)
 
 **Note the username, password, host and port of the DB2 instance. The will be needed for configuring Insurance Portal Application, Watson Knowledge Catalog and Watson Query**
