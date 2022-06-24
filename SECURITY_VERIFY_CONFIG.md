@@ -15,14 +15,14 @@ Please keep the `Ingress subdomain URL` of the OpenShift cluster ready. We will 
   - Uncheck Require proof key for code exchange (PKCE) verification.
   - For Redirect URIs, enter the re-direct URL as http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/portal/ecomm/oidcclient/redirect/home. Replace {{`IngressSubdomainURL`}} with the `Ingress subdomain URL` of the OpenShift cluster.
   - Click Save to save this SSO configuration.
-![Configure SSO](./images/configure-sso.png)
+![Configure SSO](./images/configure_sso.png)
 - Click the Entitlements tab. For the Access Type, select Automatic access for all users and groups. Click Save to save the custom application.
 - Click the Sign-on tab. Note down the **client ID and the client secret**. This is needed for configuring the `ECommerce Portal application`.
 
 **Note Security Verify endpoints**
 In the far right information pane, note down the IBM Security Verify endpoint.
 
-![Note endpoint](./images/note-endpoint.png).
+![Note endpoint](./images/note_endpoint.png).
 
 Then, note down the following endpoints: **authorization_endpoint, token_endpoint and introspection_endpoint**. These will be needed to configure our `Insurance Portal` application to integrate with Security Verify.
 
@@ -32,9 +32,9 @@ Then, note down the following endpoints: **authorization_endpoint, token_endpoin
 - Enter a name and click on `Save`
 - Again click `Save` on the parent settings page. The credentials will now be generated.
 
-![Save API Client](./images/save-api-client.png)
+![Save API Client](./images/save_api_client.png)
 - Select the added `API Client`. On the right pane, the generated credentials can be copied. Make a note of the credentials. They will be needed for the `Insurance Portal application` configuration. Also note that this is different from the `client-id` and `client-secret` we noted when you created the SSO configuration. 
 
-![Note API Client credentials](./images/note-api-client-credentials.png)
+![Note API Client credentials](./images/note_api_client.png)
 
 Back to main [README.md](README.md#3-configure-security-verify) page.
