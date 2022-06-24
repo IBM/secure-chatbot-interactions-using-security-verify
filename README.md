@@ -27,7 +27,7 @@ The code pattern explains the following:
 1. [Clone the repository](#1-clone-the-repository)
 2. [Create IBM Cloud Services](#2-create-ibm-cloud-services)
 3. [Configuration of services](#3-configuration-of-services)
-4. [Deploy Application](#4-deploy-application)
+4. [Deploy E-Commerce Portal Application](#4-deploy-e-commerce-portal-application)
 5. [Create Cloud Functions Action](#5-create-cloud-functions-action)
 6. [Setup Watson Assistant Chatbot](#6-setup-watson-assistant-chatbot)
 7. [Access the Application](#7-access-the-application)
