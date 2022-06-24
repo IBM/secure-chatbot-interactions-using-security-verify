@@ -69,6 +69,11 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 * Click **Launch Watson Assistant** to launch console.
 
+### 3. Configuration of services
+
+#### 3.1 Configure Security Verify
+
+Please follow the instructions [here](SECURITY_VERIFY_CONFIG.md) to configure Security Verify.
 
 ### 4. Deploy Application
 
