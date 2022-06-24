@@ -13,11 +13,11 @@ Please keep the `Ingress subdomain URL` of the OpenShift cluster ready. We will 
   - For the Application URL, enter the URL as http://ecomm-portal-chatbot.{{IngressSubdomainURL}}. Replace {{`IngressSubdomainURL`}} with the `Ingress subdomain URL` of the OpenShift cluster. 
   - For the Grant types, check Authorization code.
   - Uncheck Require proof key for code exchange (PKCE) verification.
-  - For Redirect URIs, enter the re-direct URL as http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/insportal/app/oidcclient/redirect/home. Replace {{`IngressSubdomainURL`}} with the `Ingress subdomain URL` of the OpenShift cluster.
+  - For Redirect URIs, enter the re-direct URL as http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/portal/ecomm/oidcclient/redirect/home. Replace {{`IngressSubdomainURL`}} with the `Ingress subdomain URL` of the OpenShift cluster.
   - Click Save to save this SSO configuration.
 ![Configure SSO](./images/configure-sso.png)
 - Click the Entitlements tab. For the Access Type, select Automatic access for all users and groups. Click Save to save the custom application.
-- Click the Sign-on tab. Note down the **client ID and the client secret**. This is needed for configuring the `Insurance Portal application`.
+- Click the Sign-on tab. Note down the **client ID and the client secret**. This is needed for configuring the `ECommerce Portal application`.
 
 **Note Security Verify endpoints**
 In the far right information pane, note down the IBM Security Verify endpoint.
