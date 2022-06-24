@@ -8,252 +8,252 @@
     "dialog_nodes": 28
   },
   "status": "Available",
-  "created": "2022-06-24T08:59:42.996Z",
-  "updated": "2022-06-24T08:59:42.996Z",
+  "created": "2022-06-24T12:15:37.376Z",
+  "updated": "2022-06-24T12:15:37.376Z",
   "language": "en",
   "skill_id": "4a1ad818-9c20-4a7c-82e9-b3f8d6178f59",
-  "snapshot": "3",
+  "snapshot": "4",
   "workspace": {
-    "created": "2022-06-24T08:59:42.996Z",
+    "created": "2022-06-24T12:15:37.376Z",
     "intents": [
       {
-        "intent": "all_order",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "intent": "greeting",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "examples": [
           {
-            "text": "report all orders",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "text": "Hello",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
-            "text": "all orders",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "text": "restart conversation",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
-            "text": "list all orders",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "text": "I need help",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
-            "text": "show my all orders",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "text": "how can you help me?",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "Hi",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           }
         ],
         "description": ""
       },
       {
         "intent": "cancel_order",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "examples": [
           {
+            "text": "cancelled",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
             "text": "cancel order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "cancel my order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "cancelled",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "cancellation",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          }
-        ],
-        "description": ""
-      },
-      {
-        "intent": "yes",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "examples": [
-          {
-            "text": "yep",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "s",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "yes",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          }
-        ],
-        "description": "yes"
-      },
-      {
-        "intent": "greeting",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "examples": [
-          {
-            "text": "I need help",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "Hi",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "Hello",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "restart conversation",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "how can you help me?",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           }
         ],
         "description": ""
       },
       {
         "intent": "order",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "examples": [
           {
             "text": "what is my last order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "last transaction",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "orders",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "my order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "active order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "latest order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "last order",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           }
         ],
         "description": ""
       },
       {
         "intent": "thanks",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "examples": [
           {
-            "text": "thank you",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "thanks",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "no",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "no more",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "nothing more",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "nothing",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
-          },
-          {
-            "text": "thankyou",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "text": "nope",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "done",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
-            "text": "nope",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "text": "thankyou",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "nothing",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "nothing more",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "no more",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "no",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "thank you",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "thanks",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           },
           {
             "text": "bye",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z"
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
           }
         ],
         "description": ""
+      },
+      {
+        "intent": "all_order",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "examples": [
+          {
+            "text": "show my all orders",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "report all orders",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "list all orders",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "all orders",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          }
+        ],
+        "description": ""
+      },
+      {
+        "intent": "yes",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "examples": [
+          {
+            "text": "yes",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "s",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          },
+          {
+            "text": "yep",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z"
+          }
+        ],
+        "description": "yes"
       }
     ],
-    "updated": "2022-06-24T08:59:42.996Z",
+    "updated": "2022-06-24T12:15:37.376Z",
     "entities": [
+      {
+        "entity": "sys-number",
+        "values": [],
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "fuzzy_match": true
+      },
       {
         "entity": "otp",
         "values": [
           {
             "type": "patterns",
             "value": "1234",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z",
             "patterns": [
               "[0-9]"
             ]
           }
         ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "fuzzy_match": true
-      },
-      {
-        "entity": "sys-number",
-        "values": [],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "fuzzy_match": true
       },
       {
@@ -262,29 +262,29 @@
           {
             "type": "patterns",
             "value": "abc@email.com",
-            "created": "2022-06-24T08:59:45.374Z",
-            "updated": "2022-06-24T08:59:45.374Z",
+            "created": "2022-06-24T12:15:39.485Z",
+            "updated": "2022-06-24T12:15:39.485Z",
             "patterns": [
               "([a-zA-Z0-9@a-zA-Z].com)"
             ]
           }
         ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "fuzzy_match": true
       },
       {
         "entity": "sys-time",
         "values": [],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "fuzzy_match": true
       },
       {
         "entity": "sys-date",
         "values": [],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "fuzzy_match": true
       }
     ],
@@ -315,17 +315,17 @@
         "output": {
           "text": {
             "values": [
-              "$webhook_result_9.message"
+              "$webhook_result_5"
             ],
             "selection_policy": "sequential"
           }
         },
-        "parent": "node_5_1655449750996",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "$webhook_result_9.verify_status == 1",
-        "dialog_node": "response_4_1655450452656",
-        "previous_sibling": "response_10_1655450454787"
+        "parent": "node_2_1653568219776",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "$webhook_result_5",
+        "dialog_node": "response_7_1653986406756",
+        "previous_sibling": "response_3_1655942895239"
       },
       {
         "type": "response_condition",
@@ -334,7 +334,7 @@
             {
               "values": [
                 {
-                  "text": "Code verification failed. $webhook_result_9.message"
+                  "text": "$webhook_result_5.message"
                 }
               ],
               "response_type": "text",
@@ -342,28 +342,54 @@
             }
           ]
         },
-        "parent": "node_5_1655449750996",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "$webhook_result_9.verify_status == 0",
-        "dialog_node": "response_9_1655453116484",
-        "previous_sibling": "response_4_1655450452656"
+        "parent": "node_2_1653568219776",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_10_1653986112882"
+        },
+        "conditions": "$webhook_result_5.verified_user==0",
+        "dialog_node": "response_3_1655942895239"
       },
       {
         "type": "response_condition",
         "output": {
           "text": {
             "values": [
-              "$webhook_result_9.message"
+              "$webhook_result_6"
             ],
             "selection_policy": "sequential"
           }
         },
-        "parent": "node_5_1655449750996",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "$webhook_result_9.verified_user == 0",
-        "dialog_node": "response_10_1655450454787"
+        "parent": "node_4_1653986757662",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "$webhook_result_6",
+        "dialog_node": "response_2_1653986786647",
+        "previous_sibling": "response_2_1653986788665"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "text": {
+            "values": [
+              "$webhook_result_6.message"
+            ],
+            "selection_policy": "sequential"
+          }
+        },
+        "parent": "node_4_1653986757662",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_10_1653986112882"
+        },
+        "conditions": "$webhook_result_6.verified_user==0",
+        "dialog_node": "response_2_1653986788665"
       },
       {
         "type": "response_condition",
@@ -376,8 +402,8 @@
           }
         },
         "parent": "node_3_1653993403438",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "next_step": {
           "behavior": "jump_to",
           "selector": "body",
@@ -408,8 +434,8 @@
           "otp_txn_id": "$webhook_result_8.otp_txn_id",
           "access_token": "$webhook_result_8.access_token"
         },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "next_step": {
           "behavior": "jump_to",
           "selector": "user_input",
@@ -423,17 +449,64 @@
         "output": {
           "text": {
             "values": [
-              "$webhook_result_5"
+              "$webhook_result_7.message"
             ],
             "selection_policy": "sequential"
           }
         },
-        "parent": "node_2_1653568219776",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "$webhook_result_5",
-        "dialog_node": "response_7_1653986406756",
-        "previous_sibling": "response_3_1655942895239"
+        "parent": "node_5_1653986877351",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_10_1653986112882"
+        },
+        "conditions": "$webhook_result_7.verified_user==0",
+        "dialog_node": "response_6_1653986904528",
+        "previous_sibling": "slot_6_1653986995649"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "text": {
+            "values": [
+              "$webhook_result_7"
+            ],
+            "selection_policy": "sequential"
+          }
+        },
+        "parent": "node_5_1653986877351",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "$webhook_result_7",
+        "dialog_node": "response_8_1653986902673",
+        "previous_sibling": "response_6_1653986904528"
+      },
+      {
+        "type": "slot",
+        "parent": "node_5_1653986877351",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "variable": "$orderID",
+        "dialog_node": "slot_6_1653986995649"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "text": {
+            "values": [
+              "$webhook_result_9.message"
+            ],
+            "selection_policy": "sequential"
+          }
+        },
+        "parent": "node_5_1655449750996",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "$webhook_result_9.verify_status == 1",
+        "dialog_node": "response_4_1655450452656",
+        "previous_sibling": "response_10_1655450454787"
       },
       {
         "type": "response_condition",
@@ -442,7 +515,7 @@
             {
               "values": [
                 {
-                  "text": "$webhook_result_5.message"
+                  "text": "Code verification failed. $webhook_result_9.message"
                 }
               ],
               "response_type": "text",
@@ -450,16 +523,81 @@
             }
           ]
         },
-        "parent": "node_2_1653568219776",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "parent": "node_5_1655449750996",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "$webhook_result_9.verify_status == 0",
+        "dialog_node": "response_9_1655453116484",
+        "previous_sibling": "response_4_1655450452656"
+      },
+      {
+        "type": "response_condition",
+        "output": {
+          "text": {
+            "values": [
+              "$webhook_result_9.message"
+            ],
+            "selection_policy": "sequential"
+          }
+        },
+        "parent": "node_5_1655449750996",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "$webhook_result_9.verified_user == 0",
+        "dialog_node": "response_10_1655450454787"
+      },
+      {
+        "type": "event_handler",
+        "output": {
+          "generic": [
+            {
+              "values": [
+                {
+                  "text": "Please provide Order ID"
+                }
+              ],
+              "response_type": "text",
+              "selection_policy": "sequential"
+            }
+          ]
+        },
+        "parent": "slot_6_1653986995649",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "event_name": "focus",
+        "dialog_node": "handler_7_1653986995685",
+        "previous_sibling": "handler_8_1653986995685"
+      },
+      {
+        "type": "event_handler",
+        "output": {},
+        "parent": "slot_6_1653986995649",
+        "context": {
+          "orderID": "@sys-number"
+        },
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "@sys-number",
+        "event_name": "input",
+        "dialog_node": "handler_8_1653986995685"
+      },
+      {
+        "type": "standard",
+        "title": "Optional Exit",
+        "output": {
+          "generic": []
+        },
+        "parent": "node_10_1653986112882",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "next_step": {
           "behavior": "jump_to",
           "selector": "body",
-          "dialog_node": "node_10_1653986112882"
+          "dialog_node": "node_4_1653994669400"
         },
-        "conditions": "$webhook_result_5.verified_user==0",
-        "dialog_node": "response_3_1655942895239"
+        "conditions": "#thanks",
+        "dialog_node": "node_7_1655467323513",
+        "previous_sibling": "node_3_1653993403438"
       },
       {
         "type": "standard",
@@ -478,8 +616,8 @@
           ]
         },
         "parent": "node_10_1653986112882",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "next_step": {
           "behavior": "jump_to",
           "selector": "body",
@@ -488,24 +626,6 @@
         "conditions": "true",
         "dialog_node": "node_7_1653994131821",
         "previous_sibling": "node_7_1655467323513"
-      },
-      {
-        "type": "standard",
-        "title": "Optional Exit",
-        "output": {
-          "generic": []
-        },
-        "parent": "node_10_1653986112882",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "next_step": {
-          "behavior": "jump_to",
-          "selector": "body",
-          "dialog_node": "node_4_1653994669400"
-        },
-        "conditions": "#thanks",
-        "dialog_node": "node_7_1655467323513",
-        "previous_sibling": "node_3_1653993403438"
       },
       {
         "type": "standard",
@@ -522,8 +642,8 @@
             "result_variable": "webhook_result_8"
           }
         ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "metadata": {
           "_customization": {
             "mcr": true
@@ -531,126 +651,6 @@
         },
         "conditions": "@emailID",
         "dialog_node": "node_3_1653993403438"
-      },
-      {
-        "type": "event_handler",
-        "output": {
-          "generic": [
-            {
-              "values": [
-                {
-                  "text": "Please provide Order ID"
-                }
-              ],
-              "response_type": "text",
-              "selection_policy": "sequential"
-            }
-          ]
-        },
-        "parent": "slot_6_1653986995649",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "event_name": "focus",
-        "dialog_node": "handler_7_1653986995685",
-        "previous_sibling": "handler_8_1653986995685"
-      },
-      {
-        "type": "event_handler",
-        "output": {},
-        "parent": "slot_6_1653986995649",
-        "context": {
-          "orderID": "@sys-number"
-        },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "@sys-number",
-        "event_name": "input",
-        "dialog_node": "handler_8_1653986995685"
-      },
-      {
-        "type": "response_condition",
-        "output": {
-          "text": {
-            "values": [
-              "$webhook_result_6"
-            ],
-            "selection_policy": "sequential"
-          }
-        },
-        "parent": "node_4_1653986757662",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "$webhook_result_6",
-        "dialog_node": "response_2_1653986786647",
-        "previous_sibling": "response_2_1653986788665"
-      },
-      {
-        "type": "response_condition",
-        "output": {
-          "text": {
-            "values": [
-              "$webhook_result_6.message"
-            ],
-            "selection_policy": "sequential"
-          }
-        },
-        "parent": "node_4_1653986757662",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "next_step": {
-          "behavior": "jump_to",
-          "selector": "body",
-          "dialog_node": "node_10_1653986112882"
-        },
-        "conditions": "$webhook_result_6.verified_user==0",
-        "dialog_node": "response_2_1653986788665"
-      },
-      {
-        "type": "response_condition",
-        "output": {
-          "text": {
-            "values": [
-              "$webhook_result_7"
-            ],
-            "selection_policy": "sequential"
-          }
-        },
-        "parent": "node_5_1653986877351",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "$webhook_result_7",
-        "dialog_node": "response_8_1653986902673",
-        "previous_sibling": "response_6_1653986904528"
-      },
-      {
-        "type": "response_condition",
-        "output": {
-          "text": {
-            "values": [
-              "$webhook_result_7.message"
-            ],
-            "selection_policy": "sequential"
-          }
-        },
-        "parent": "node_5_1653986877351",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "next_step": {
-          "behavior": "jump_to",
-          "selector": "body",
-          "dialog_node": "node_10_1653986112882"
-        },
-        "conditions": "$webhook_result_7.verified_user==0",
-        "dialog_node": "response_6_1653986904528",
-        "previous_sibling": "slot_6_1653986995649"
-      },
-      {
-        "type": "slot",
-        "parent": "node_5_1653986877351",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "variable": "$orderID",
-        "dialog_node": "slot_6_1653986995649"
       },
       {
         "type": "standard",
@@ -669,8 +669,8 @@
           ]
         },
         "parent": "node_7_1622190011507",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "conditions": "#no",
         "dialog_node": "node_7_1622534877187",
         "previous_sibling": "node_6_1622534825194"
@@ -682,8 +682,8 @@
           "generic": []
         },
         "parent": "node_7_1622190011507",
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "next_step": {
           "behavior": "jump_to",
           "selector": "body",
@@ -691,49 +691,6 @@
         },
         "conditions": "#yes",
         "dialog_node": "node_6_1622534825194"
-      },
-      {
-        "type": "standard",
-        "title": "User Options",
-        "output": {
-          "generic": [
-            {
-              "title": "What would you like to do?",
-              "options": [
-                {
-                  "label": "List the active orders",
-                  "value": {
-                    "input": {
-                      "text": "active orders"
-                    }
-                  }
-                },
-                {
-                  "label": "List all orders",
-                  "value": {
-                    "input": {
-                      "text": "list all orders"
-                    }
-                  }
-                },
-                {
-                  "label": "Cancel order",
-                  "value": {
-                    "input": {
-                      "text": "cancel order"
-                    }
-                  }
-                }
-              ],
-              "response_type": "option"
-            }
-          ]
-        },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "conditions": "",
-        "dialog_node": "node_8_1655453285889",
-        "previous_sibling": "node_5_1655449750996"
       },
       {
         "type": "standard",
@@ -750,8 +707,8 @@
             "result_variable": "webhook_result_6"
           }
         ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "metadata": {
           "_customization": {
             "mcr": true
@@ -765,39 +722,6 @@
         "conditions": "#all_order",
         "dialog_node": "node_4_1653986757662",
         "previous_sibling": "node_2_1653568219776"
-      },
-      {
-        "type": "standard",
-        "title": "Verify OTP",
-        "actions": [
-          {
-            "name": "main_webhook",
-            "type": "webhook",
-            "parameters": {
-              "otp": "<?input.text?>",
-              "emailID": "$emailID",
-              "otp_txn_id": "$otp_txn_id",
-              "access_token": "$access_token",
-              "request_type": "verify_otp"
-            },
-            "result_variable": "webhook_result_9"
-          }
-        ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "metadata": {
-          "_customization": {
-            "mcr": true
-          }
-        },
-        "next_step": {
-          "behavior": "jump_to",
-          "selector": "body",
-          "dialog_node": "node_8_1655453285889"
-        },
-        "conditions": "@otp",
-        "dialog_node": "node_5_1655449750996",
-        "previous_sibling": "node_10_1653986112882"
       },
       {
         "type": "frame",
@@ -814,8 +738,8 @@
             "result_variable": "webhook_result_7"
           }
         ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "metadata": {
           "_customization": {
             "mcr": true
@@ -859,8 +783,8 @@
             }
           ]
         },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "conditions": "false",
         "digress_in": "does_not_return",
         "dialog_node": "node_7_1622190011507",
@@ -868,35 +792,46 @@
       },
       {
         "type": "standard",
-        "title": "List Order",
-        "actions": [
-          {
-            "name": "main_webhook",
-            "type": "webhook",
-            "parameters": {
-              "emailID": "$emailID",
-              "access_token": "$access_token",
-              "request_type": "list_active_orders"
-            },
-            "result_variable": "webhook_result_5"
-          }
-        ],
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
-        "metadata": {
-          "_customization": {
-            "mcr": true
-          }
+        "title": "User Options",
+        "output": {
+          "generic": [
+            {
+              "title": "What would you like to do?",
+              "options": [
+                {
+                  "label": "List the active orders",
+                  "value": {
+                    "input": {
+                      "text": "active orders"
+                    }
+                  }
+                },
+                {
+                  "label": "List all orders",
+                  "value": {
+                    "input": {
+                      "text": "list all orders"
+                    }
+                  }
+                },
+                {
+                  "label": "Cancel order",
+                  "value": {
+                    "input": {
+                      "text": "cancel order"
+                    }
+                  }
+                }
+              ],
+              "response_type": "option"
+            }
+          ]
         },
-        "next_step": {
-          "behavior": "jump_to",
-          "selector": "body",
-          "dialog_node": "node_7_1622190011507"
-        },
-        "conditions": "#order",
-        "digress_in": "does_not_return",
-        "dialog_node": "node_2_1653568219776",
-        "previous_sibling": "node_8_1655453285889"
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "conditions": "",
+        "dialog_node": "node_8_1655453285889",
+        "previous_sibling": "node_5_1655449750996"
       },
       {
         "type": "standard",
@@ -920,13 +855,78 @@
             }
           ]
         },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "conditions": "anything_else",
         "digress_in": "does_not_return",
         "dialog_node": "Anything else",
         "previous_sibling": "node_4_1653994669400",
         "disambiguation_opt_out": true
+      },
+      {
+        "type": "standard",
+        "title": "List Order",
+        "actions": [
+          {
+            "name": "main_webhook",
+            "type": "webhook",
+            "parameters": {
+              "emailID": "$emailID",
+              "access_token": "$access_token",
+              "request_type": "list_active_orders"
+            },
+            "result_variable": "webhook_result_5"
+          }
+        ],
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_7_1622190011507"
+        },
+        "conditions": "#order",
+        "digress_in": "does_not_return",
+        "dialog_node": "node_2_1653568219776",
+        "previous_sibling": "node_8_1655453285889"
+      },
+      {
+        "type": "standard",
+        "title": "Verify OTP",
+        "actions": [
+          {
+            "name": "main_webhook",
+            "type": "webhook",
+            "parameters": {
+              "otp": "<?input.text?>",
+              "emailID": "$emailID",
+              "otp_txn_id": "$otp_txn_id",
+              "access_token": "$access_token",
+              "request_type": "verify_otp"
+            },
+            "result_variable": "webhook_result_9"
+          }
+        ],
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
+        "metadata": {
+          "_customization": {
+            "mcr": true
+          }
+        },
+        "next_step": {
+          "behavior": "jump_to",
+          "selector": "body",
+          "dialog_node": "node_8_1655453285889"
+        },
+        "conditions": "@otp",
+        "dialog_node": "node_5_1655449750996",
+        "previous_sibling": "node_10_1653986112882"
       },
       {
         "type": "standard",
@@ -939,7 +939,7 @@
                   "text": "Thank you for choosing our services! See you soon again."
                 },
                 {
-                  "text": "Thanks you. Hope you had a great experience!"
+                  "text": "Thank you. Hope you had a great experience!"
                 }
               ],
               "response_type": "text",
@@ -947,8 +947,8 @@
             }
           ]
         },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "conditions": "#thanks",
         "digress_in": "does_not_return",
         "dialog_node": "node_4_1653994669400",
@@ -970,8 +970,8 @@
             }
           ]
         },
-        "created": "2022-06-24T08:59:45.374Z",
-        "updated": "2022-06-24T08:59:45.374Z",
+        "created": "2022-06-24T12:15:39.485Z",
+        "updated": "2022-06-24T12:15:39.485Z",
         "conditions": "welcome || #greeting",
         "digress_in": "does_not_return",
         "dialog_node": "node_10_1653986112882"
