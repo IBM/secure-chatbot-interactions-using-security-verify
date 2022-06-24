@@ -2,15 +2,21 @@
 
 Chat bots are becoming a popular way to interact with customers. In any business conversation, validation of the customer identity is very essential. Identity verification prevents anyone from carrying out an action on other people's behalf, creating false identities, or committing fraud. IBM Security Verify can be used to establish identity and trust during chatbot interactions.
 
-[IBM Security Verify](https://www.ibm.com/verify/verify-identity) protects users and applications with a cloud-native, software-as-a-service (SaaS) approach that leverages the cloud. Beyond single-sign on and multifactor authentication, Verify is a modernized, modular IDaaS that provides deep AI-powered context for [risk based authentication and adaptive access](https://www.ibm.com/verify/verify-identity/adaptive-access). IBM Security Verify provides a centralized user management interface that can be managed through the admin UI or automatically through REST APIs. It is built upon open standards such as OpenID Connect and SAML 2.0. There are a number of multifactor verification methods available out-of-the-box like SMS, Email, Voice callback one-time passcode, Push notification approval, Knowledge questions and so on. This code pattern uses the single-sign on authentication and email based multifactor verification method.
+[IBM Security Verify](https://www.ibm.com/verify/verify-identity) protects users and applications with a cloud-native, software-as-a-service (SaaS) approach that leverages the cloud. Beyond `single-sign on` and `multifactor authentication`, Verify is a modernized, modular IDaaS that provides deep AI-powered context for [risk based authentication and adaptive access](https://www.ibm.com/verify/verify-identity/adaptive-access). IBM Security Verify provides a centralized user management interface that can be managed through the admin UI or automatically through REST APIs. It is built upon open standards such as `OpenID Connect and SAML 2.0`. There are a number of multifactor verification methods available out-of-the-box like `SMS, Email, Voice callback one-time passcode, Push notification approval, Knowledge questions` and so on. 
 
-This code pattern demonstrates a scenario of retail domain where customers can create their account by registering to the application and then place order for the items. Later, if they want to check their orders, cancel the order then this facility is provided through chatbot. Chatbot is integrated with the webapp and avoid the hassle of login into the app to check your order. Though user does not need to login to start conversation with chatbot but with the help of security verify user's identity is validated by verifying email-id and the one time code sent by security verify. Once the identity is validated, the chatbot allows user to communicate further regarding their orders.
+This code pattern uses the single-sign on authentication and email based multifactor verification method.
+
+This code pattern demonstrates a scenario in the `Online Retail` domain where customers register on the portal, and subsequently login to the portal to shop for merchandise. After a customer has purchased items, they want to perform the below operations:
+- Check the status of the order
+- Cancel the order
+
+These two operations can be done with a conversational chatbot without a need to login to the portal. Chatbot is integrated with the webapp to avoid the hassle of logging into the portal to check order status or cancel the order. The identity of the user needs to be ascertained to allow these two operations. Though the user  need not login to start conversation with chatbot, the user is authenticated by `verifying email-id and the one time code` sent by Security Verify. Once the identity is ascertained, the chatbot allows user to communicate further regarding their orders.
 
 The code pattern explains the following:
-* Add SSO to a java based webapp
+* Add SSO to a Java based webapp
 * Design chatbot conversation using Watson Assistant
 * Implementing IBM Cloud Functions to be used as webhook with chatbot
-* Integration of security verify with Watson assistant to establish identity and trust
+* Integration of Security Verify with Watson assistant to establish identity and trust (Chatbot security)
 
 ## Flow
 
@@ -249,6 +255,10 @@ In the next window, click `Add an action or dialog skill`. In `Add Actions or Di
 
 
 ## Summary
+
+In this code pattern you saw how to enable single sign-on for a web application, and also chatbot integration with Identity and Access Management using IBM Security Verify. Both businesses and customers find it convenient to communicate using a conversational chatbot. Ascertaining customer identity in a chatbot conversation becomes all the more important. Hope you enjoyed this code pattern!
+
+For more information on extending the security aspects for your applications using Security Verify, refer to this [link](https://docs.verify.ibm.com/verify/docs/).
 
 ## License
 This code pattern is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
