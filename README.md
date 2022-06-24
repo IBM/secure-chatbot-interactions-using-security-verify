@@ -80,8 +80,6 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 * Login to IBM Cloud, in [IBM Cloud Catalog](https://cloud.ibm.com/catalog) search of Assistant and create a Watson Assistant service by selecting the **Lite** plan and clicking on **Create**.
 
-![](./images/watson-assistant1.png)
-
 * Click **Launch Watson Assistant** to launch console.
 
 #### 2.4 Create an instance of OpenShift cluster
@@ -216,7 +214,7 @@ Login to your IBM Cloud account. On the dashboard, click on the hamburger menu a
 Click the `Create` button to create a new action. 
 Enter a name for action under `Action Name`. Leave `Enclosing Package` as `(Default Package)` itself. Under `Runtime` select option for Node.js.
 
-Click on `Create` button. You are presented with actions code editor. Replace the existing code with the javascript code [here]().
+Click on `Create` button. You are presented with actions code editor. Replace the existing code with the javascript code [here](https://github.com/IBM/secure-chatbot-interactions-using-security-verify/blob/main/sources/chatbot/cloud-function/function.js).
 
 Next, in the javascript code, update the value of following variables (mentioned in the beginning of the file):
 
@@ -253,7 +251,7 @@ Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Res
 - On the left navigation links click `Options`->`Webhooks` on the left hand navigation.
 - In `URL` text field, enter the REST API endpoint as noted in step 5 and append it with .json. It should look something like this
 	```
-	https://eu-gb.functions.appdomain.cloud/api/v1/web/.../default/Make%20DB%20Calls.json
+	https://eu-gb.functions.appdomain.cloud/api/v1/web/.../default/sample.json
 	```
 - Click `Assistants` icon on the top left corner of Watson Assistant screen
 - Click `Create assistant`.
@@ -268,6 +266,14 @@ Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Res
 ### 7. Access the Application
 
 Access the app using the link noted in step 4.2. 
+
+When you access the portal at the very first time, you need to register. Click on Register, fill the registration form and `submit`. On submission, it will create a user in Security Verify and send an email with temporary password to the user.
+
+After receiving email, access the portal and do login. You need to provide the temporary password for the first time and then it will ask you to change the password. After successful login, you can access the portal to shop the merchandise.
+
+The shopping experience and how to use chatbot to check the order status or to cancel the order is shown here.
+
+![Demo](images/demo.gif)
 
 ## Summary
 
