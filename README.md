@@ -111,7 +111,7 @@ Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Res
 
 On the Watson Assistant dashboard, on the left side of the screen click on `skills` icon. Click `Create skill` button. Select `Dialog skill` and click `Next`. 
 
-Select `Upload skill` tab. The skill file is available if your cloned GitHub repo in the path `app-modernization-coexistence-layer/sources/chatbot/dialog.json`. Click `Drag and drop file here or click to select a file` and select the skill file. Click `Upload`.
+Select `Upload skill` tab. The skill file is available [here](). Click `Drag and drop file here or click to select a file` and select the skill file from your cloned Github Repo folder. Click `Upload`.
 
 The dialog skill should be imported now. Next, click `Options` on left navigation menu for the skill. `Webhooks` under `Options` is selected by default. On this page under `URL`, enter the Webhook url you copied in the above section and append the URL with `.json`.
 **Note: Append the url with .json extension. Without the extension, functions won't be called**
