@@ -42,9 +42,9 @@ The code pattern explains the following:
 1. [Clone the repository](#1-clone-the-repository)
 2. [Create IBM Cloud Services](#2-create-ibm-cloud-services)
 3. [Configure Security Verify](#3-configure-security-verify)
-4. [Deploy E-Commerce Portal Application](#4-deploy-e-commerce-portal-application)
-5. [Create Cloud Functions Action](#5-create-cloud-functions-action)
-6. [Setup Watson Assistant Chatbot](#6-setup-watson-assistant-chatbot)
+4. [Create Cloud Functions Action](#4-create-cloud-functions-action)
+5. [Setup Watson Assistant Chatbot](#5-setup-watson-assistant-chatbot)
+6. [Deploy E-Commerce Portal Application](#6-deploy-e-commerce-portal-application)
 7. [Access the Application](#7-access-the-application)
 
 ### 1. Clone the repository
@@ -93,121 +93,7 @@ Make a note of the `Ingress Subdomain URL`:
 
 Please follow the instructions [here](SECURITY_VERIFY_CONFIG.md) to configure Security Verify.
 
-### 4. Deploy E-Commerce Portal Application
-**Login to your OpenShift cluster from command line**
-
-Login to your OpenShift cluster. Access the `IBM Cloud Dashboard > Clusters (under Resource Summary) > click on your OpenShift Cluster > OpenShift web Console`. Click the dropdown next to your username at the top of the OpenShift web console and select Copy Login Command. Select Display Token and copy the oc login command from the web console and paste it into the terminal on your workstation. Run the command to login to the cluster using `oc` command line.
-
-#### 4.1 Configure E-Commerce Portal Service
-
-**4.1.1 Changes to server.xml**
-
-In the cloned repo folder - go to `src/main/liberty/config`. Open `server.xml`.
-
-Make the below changes for the `openidConnectClient` element and save the file:
-- Replace {{ingress-sub-domain}} with `Ingress subdomain` of the OpenShift cluster.
-- Replace {{clientId}} and {{clientSecret}} with the Client ID and Client secret noted on the `Sign-on` tab of Security Verify.
-- Replace {{tenantId}} with the tenant id of Security Verify noted at the time of creation.
-
-```
-<openidConnectClient id="home"
-		signatureAlgorithm="RS256"
-		httpsRequired="false"    
-		redirectToRPHostAndPort="http://ecomm-portal-chatbot.{{ingress-sub-domain}}/insportal/app"
-		clientId="{{clientId}}"
-		clientSecret="{{clientSecret}}"
-		authorizationEndpointUrl="https://{{tenantId}}.verify.ibm.com/v1.0/endpoint/default/authorize"
-		tokenEndpointUrl="https://{{tenantId}}.verify.ibm.com/v1.0/endpoint/default/token"></openidConnectClient>
-```
-
-**4.1.2 Changes to db.config**
-
-In the cloned repo folder - go to `src/main/resources`. Open `db.config`.
-
-Replace the {{host}} and {{port}} with the host and port you noted during Db2 credentials creation. Enter the userid, password and schema with the username, password and username(in uppercase). Save the file.
-> Note: the schema should be in uppercase of the username noted in Db2 credentials.
-```
-jdbcurl=jdbc:db2://{{host}}:{{port}}/bludb:sslConnection=true;
-userid=
-password=
-schema=
-```
-
-**4.1.3 Changes to verify.config**
-In the cloned repo folder - go to `src/main/resources`. Open `verify.config`.
-
-Make the below changes and save the file:
-- Replace {{tenant-id}} with the tenant id of Security Verify noted at the time of creation.
-- For `clientId` and `clientSecret` enter the Client ID and Client secret noted on the `Sign-on` tab of Security Verify.
-- For `apiClientId` and `apiClientSecret` enter the Client ID and Client secret noted on the `API Access` tab of Security Verify.
-
-```
-introspectionUrl=https://{{tenant-id}}.verify.ibm.com/v1.0/endpoint/default/introspect
-tokenUrl=https://{{tenant-id}}.verify.ibm.com/v1.0/endpoint/default/token
-userInfoUrl=https://{{tenant-id}}.verify.ibm.com/v1.0/endpoint/default/userinfo
-clientId=
-clientSecret=
-usersUrl=https://{{tenant-id}}.verify.ibm.com/v2.0/Users
-apiClientId=
-apiClientSecret=
-```
-
-**4.1.4 Embed chatbot on the home page of the E-Commerce Portal Application**
-
-In the cloned repo folder - go to `src/main/resources`. Open `home.html`. 
-Embed the chatbot script element before the closing`body` tag.
->Note: Replace the `integration ID`, `region` and `instance ID` of the Watson Assistant deployed in previous section. 
-```
-<script>
-		window.watsonAssistantChatOptions = {
-			integrationID : "fxxxxeb", // The ID of this integration.
-			region : "eu-gb", // The region your integration is hosted in.
-			serviceInstanceID : "bxxxxx4", // The ID of your service instance.
-			onLoad : function(instance) {
-				instance.render();
-			}
-		};
-		setTimeout(function() {
-			const t = document.createElement('script');
-			t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/"
-					+ (window.watsonAssistantChatOptions.clientVersion || 'latest')
-					+ "/WatsonAssistantChatEntry.js"
-			document.head.appendChild(t);
-		});
-</script>
-```
-#### 4.2 Deploy E-Commerce Portal application
-On the terminal window, got to the repository folder that we cloned earlier. 
-Go to the directory - `sources/ins-portal-app/src/main/java/com/example/legacy/ecomm/`.
-Open the file `ECommAppEndpoint.java`.
-
-Replace the placeholder `{{ingress-sub-domain}}` with the ingress sub domain of the OpenShift cluster you noted earlier. Save the file.
-```
-private static String ingressSubDomain = "ecomm-portal-chatbot.{{ingress-sub-domain}}/";
-```
-
-Now change directory to `/sources/ecomm-portal` in the cloned repo folder.
-Run the following commands to deploy `E-Commerce Portal application`.
-```
-oc new-project chatbot
-mvn clean install
-oc new-app . --name=ecomm-portal --strategy=docker
-oc start-build ecomm-portal --from-dir=.
-oc logs -f bc/ecomm-portal
-oc expose svc/ecomm-portal
-```
-Ensure that the application is started successfully using the command `oc get pods`. Also make a note of the route using the command `oc get routes`. 
-
-#### 4.3 Configure Db2 database
-
-In this step, we will create two tables in the Db2 database - CUSTOMER and ORDERS table.
-
-Invoke the URL - http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/portal/ecomm/setupdb
-
->Note: Replace {{IngressSubdomainURL}} with `Ingress subdomain` of the OpenShift cluster.
-
-
-### 5. Create Cloud Functions Action
+### 4. Create Cloud Functions Action
 
 Login to your IBM Cloud account. On the dashboard, click on the hamburger menu and navigate to `Functions` and click on `Actions`.
 
@@ -240,7 +126,7 @@ For the action just created, click `Endpoints` on the left side navigation menu.
 
 ![Webhook URL](images/action-url.png)
 
-### 6. Setup Watson Assistant Chatbot
+### 5. Setup Watson Assistant Chatbot
 
 Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Resource List`. Click on the Watson Assistant instance that you created earlier. Then click on `Launch Watson Assistant` button to launch Watson Assistant dashboard.
 
@@ -262,6 +148,119 @@ Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Res
 - Click on `Create` button.
 - Click on `Embed` tab. Copy and save the `script` in a text file. In this script, you will need to update `integrationID`, `serviceInstanceID` and `region` as noted from Preview link earlier.
 - This code snippet will be used in the E-commerce Portal UI.
+
+### 6. Deploy E-Commerce Portal Application
+**Login to your OpenShift cluster from command line**
+
+Login to your OpenShift cluster. Access the `IBM Cloud Dashboard > Clusters (under Resource Summary) > click on your OpenShift Cluster > OpenShift web Console`. Click the dropdown next to your username at the top of the OpenShift web console and select Copy Login Command. Select Display Token and copy the oc login command from the web console and paste it into the terminal on your workstation. Run the command to login to the cluster using `oc` command line.
+
+#### 6.1 Configure E-Commerce Portal Service
+
+**6.1.1 Changes to server.xml**
+
+In the cloned repo folder - go to `src/main/liberty/config`. Open `server.xml`.
+
+Make the below changes for the `openidConnectClient` element and save the file:
+- Replace {{ingress-sub-domain}} with `Ingress subdomain` of the OpenShift cluster.
+- Replace {{clientId}} and {{clientSecret}} with the Client ID and Client secret noted on the `Sign-on` tab of Security Verify.
+- Replace {{tenantId}} with the tenant id of Security Verify noted at the time of creation.
+
+```
+<openidConnectClient id="home"
+		signatureAlgorithm="RS256"
+		httpsRequired="false"    
+		redirectToRPHostAndPort="http://ecomm-portal-chatbot.{{ingress-sub-domain}}/insportal/app"
+		clientId="{{clientId}}"
+		clientSecret="{{clientSecret}}"
+		authorizationEndpointUrl="https://{{tenantId}}.verify.ibm.com/v1.0/endpoint/default/authorize"
+		tokenEndpointUrl="https://{{tenantId}}.verify.ibm.com/v1.0/endpoint/default/token"></openidConnectClient>
+```
+
+**6.1.2 Changes to db.config**
+
+In the cloned repo folder - go to `src/main/resources`. Open `db.config`.
+
+Replace the {{host}} and {{port}} with the host and port you noted during Db2 credentials creation. Enter the userid, password and schema with the username, password and username(in uppercase). Save the file.
+> Note: the schema should be in uppercase of the username noted in Db2 credentials.
+```
+jdbcurl=jdbc:db2://{{host}}:{{port}}/bludb:sslConnection=true;
+userid=
+password=
+schema=
+```
+
+**6.1.3 Changes to verify.config**
+In the cloned repo folder - go to `src/main/resources`. Open `verify.config`.
+
+Make the below changes and save the file:
+- Replace {{tenant-id}} with the tenant id of Security Verify noted at the time of creation.
+- For `clientId` and `clientSecret` enter the Client ID and Client secret noted on the `Sign-on` tab of Security Verify.
+- For `apiClientId` and `apiClientSecret` enter the Client ID and Client secret noted on the `API Access` tab of Security Verify.
+
+```
+introspectionUrl=https://{{tenant-id}}.verify.ibm.com/v1.0/endpoint/default/introspect
+tokenUrl=https://{{tenant-id}}.verify.ibm.com/v1.0/endpoint/default/token
+userInfoUrl=https://{{tenant-id}}.verify.ibm.com/v1.0/endpoint/default/userinfo
+clientId=
+clientSecret=
+usersUrl=https://{{tenant-id}}.verify.ibm.com/v2.0/Users
+apiClientId=
+apiClientSecret=
+```
+
+**6.1.4 Embed chatbot on the home page of the E-Commerce Portal Application**
+
+In the cloned repo folder - go to `src/main/resources`. Open `home.html`. 
+Embed the chatbot script element before the closing`body` tag.
+>Note: Replace the `integration ID`, `region` and `instance ID` of the Watson Assistant noted in previous sections. 
+```
+<script>
+		window.watsonAssistantChatOptions = {
+			integrationID : "fxxxxeb", // The ID of this integration.
+			region : "eu-gb", // The region your integration is hosted in.
+			serviceInstanceID : "bxxxxx4", // The ID of your service instance.
+			onLoad : function(instance) {
+				instance.render();
+			}
+		};
+		setTimeout(function() {
+			const t = document.createElement('script');
+			t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/"
+					+ (window.watsonAssistantChatOptions.clientVersion || 'latest')
+					+ "/WatsonAssistantChatEntry.js"
+			document.head.appendChild(t);
+		});
+</script>
+```
+#### 6.2 Deploy E-Commerce Portal application
+On the terminal window, got to the repository folder that we cloned earlier. 
+Go to the directory - `sources/ins-portal-app/src/main/java/com/example/legacy/ecomm/`.
+Open the file `ECommAppEndpoint.java`.
+
+Replace the placeholder `{{ingress-sub-domain}}` with the ingress sub domain of the OpenShift cluster you noted earlier. Save the file.
+```
+private static String ingressSubDomain = "ecomm-portal-chatbot.{{ingress-sub-domain}}/";
+```
+
+Now change directory to `/sources/ecomm-portal` in the cloned repo folder.
+Run the following commands to deploy `E-Commerce Portal application`.
+```
+oc new-project chatbot
+mvn clean install
+oc new-app . --name=ecomm-portal --strategy=docker
+oc start-build ecomm-portal --from-dir=.
+oc logs -f bc/ecomm-portal
+oc expose svc/ecomm-portal
+```
+Ensure that the application is started successfully using the command `oc get pods`. Also make a note of the route using the command `oc get routes`. 
+
+#### 6.3 Configure Db2 database
+
+In this step, we will create two tables in the Db2 database - CUSTOMER and ORDERS table.
+
+Invoke the URL - http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/portal/ecomm/setupdb
+
+>Note: Replace {{IngressSubdomainURL}} with `Ingress subdomain` of the OpenShift cluster.
 
 ### 7. Access the Application
 
