@@ -116,7 +116,7 @@ var GET_ALL_ORDERS_URL = 'http://<openshift_url>/portal/ecomm/auth/getorders'
 var CANCEL_ORDER_URL = 'http://<openshift_url>/ecomm/auth/cancelorder'
 ```
 
->Note: Please use the security verify credentials noted in step #< > and the APIs URL as noted in step #< >.
+>Note: Please use the security verify credentials noted in step 3 and replace `openshift_url` by the `OpenShift ingress subdomain url` as noted in step 2.4.
 
 Click `Save` button on the top right of the code editor. 
 
