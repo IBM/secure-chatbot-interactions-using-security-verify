@@ -142,12 +142,8 @@ Login to IBM Cloud. On the dashboard, click on the hamburger menu and click `Res
 - Click `Assistants` icon on the top left corner of Watson Assistant screen
 - Click `Create assistant`.
 - Give a name for your assistant, optionally enter a description and click `Create assistant`.
-- On the just created Assistant screen, click the `Preview` button. Make a note of `integrationID`, `serviceInstanceID` and `region`from the link provided under the section `Share this link`.
+- On the just created Assistant screen, click the `Preview` button. Make a note of `integrationID`, `serviceInstanceID` and `region`from the link provided under the section `Share this link`. These will be used in next step.
 - Close the window using the `x` button placed just below the user icon on the top right corner.
-- In Assistants page, under `Integrations` section (bottom right corner of the screen), click `Integrate web chat`.
-- Click on `Create` button.
-- Click on `Embed` tab. Copy and save the `script` in a text file. In this script, you will need to update `integrationID`, `serviceInstanceID` and `region` as noted from Preview link earlier.
-- This code snippet will be used in the E-commerce Portal UI.
 
 ### 6. Deploy E-Commerce Portal Application
 **Login to your OpenShift cluster from command line**
@@ -212,7 +208,7 @@ apiClientSecret=
 
 In the cloned repo folder - go to `src/main/resources`. Open `home.html`. 
 Embed the chatbot script element before the closing`body` tag.
->Note: Replace the `integration ID`, `region` and `instance ID` of the Watson Assistant noted in previous sections. 
+>Note: Replace the `integration ID`, `region` and `instance ID` of the Watson Assistant noted in step 5. 
 ```
 <script>
 		window.watsonAssistantChatOptions = {
