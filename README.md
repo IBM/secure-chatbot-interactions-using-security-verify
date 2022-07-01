@@ -270,8 +270,12 @@ The shopping experience and how to use chatbot to check the order status or to c
 
 ![Demo](images/demo.gif)
 
-The chatbot helps you to do the following:
-*** L
+The chatbot helps you to do the following after successful identity verification:
+
+* ***List active orders***: When you order any item(s), the transaction gets recorded and marked as active. This option shows you the ordered items which are marked as `active`.
+* ***Cancel order***: It allows you to cancel the ordered item after providing the `order ID`. The order ID can be found in the response of `List active orders`. After cancellation, the order gets tagged as `cancelled`.
+* ***List all orders***: It shows the entire order history. The response includes the orders with `active` and `cancelled` status.
+
 
 ## Summary
 
