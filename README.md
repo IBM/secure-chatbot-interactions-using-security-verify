@@ -260,15 +260,18 @@ Invoke the URL - http://ecomm-portal-chatbot.{{IngressSubdomainURL}}/portal/ecom
 
 ### 7. Access the Application
 
-Access the app using the link noted in step 4.2. 
+Access the app using the link noted in step 6.2. 
 
-When you access the portal at the very first time, you need to register. Click on Register, fill the registration form and `submit`. On submission, it will create a user in Security Verify and send an email with temporary password to the user.
+When you access the portal at the very first time, user registration is required. Click on Register, fill the registration form and `submit`. On submission, it will create a user in Security Verify and send an email with temporary password to the user.
 
-After receiving email, access the portal and do login. You need to provide the temporary password for the first time and then it will ask you to change the password. After successful login, you can access the portal to shop the merchandise.
+After receiving the email from Security Verify (stating Account created), access the app and do login. You need to provide the temporary password for the first time and then it will ask you to change the password. After successful login, you can access the portal to shop the merchandise.
 
 The shopping experience and how to use chatbot to check the order status or to cancel the order is shown here.
 
 ![Demo](images/demo.gif)
+
+The chatbot helps you to do the following:
+*** L
 
 ## Summary
 
