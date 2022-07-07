@@ -13,14 +13,14 @@ var axios = require('axios');
 var qs = require('qs');
 
 //Security Verify Details
-var tenant_url = "shikham.verify.ibm.com";
-var client_id = 'b06dad03-5204-4df8-b59f-deac810c8b82';
-var client_secret = "WwY7avA2Xt";
+var tenant_url = "xxx.verify.ibm.com";
+var client_id = 'bxxxx2';
+var client_secret = "xxxx";
 
 //API Details
-var GET_ACTIVE_ORDERS_URL='http://ecomm-portal-chatbot.cp-india-q3-f2c6cdc6801be85fd188b09d006f13e3-0000.jp-tok.containers.appdomain.cloud/portal/ecomm/auth/getactiveorders';
-var GET_ALL_ORDERS_URL = 'http://ecomm-portal-chatbot.cp-india-q3-f2c6cdc6801be85fd188b09d006f13e3-0000.jp-tok.containers.appdomain.cloud/portal/ecomm/auth/getorders';
-var CANCEL_ORDER_URL = 'http://ecomm-portal-chatbot.cp-india-q3-f2c6cdc6801be85fd188b09d006f13e3-0000.jp-tok.containers.appdomain.cloud/portal/ecomm/auth/cancelorder';
+var GET_ACTIVE_ORDERS_URL='http://<openshift_url>/portal/ecomm/auth/getactiveorders';
+var GET_ALL_ORDERS_URL = 'http://<openshift_url>/portal/ecomm/auth/getorders';
+var CANCEL_ORDER_URL = 'http://<openshift_url>/portal/ecomm/auth/cancelorder';
 
 
 async function main(params) {
