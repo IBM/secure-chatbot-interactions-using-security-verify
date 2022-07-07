@@ -72,7 +72,7 @@ Select an appropriate plan. Read and accept the license agreement. You may leave
 
 ![create_db2_credential](images/create_db2_credential.png)
 
-**Note the username, password, host and port of the DB2 instance. The will be needed for configuring ECommerce Portal Application, Watson Knowledge Catalog and Watson Query**
+**Note the username, password, host and port of the DB2 instance. The will be needed for configuring E-Commerce Portal Application.**
 
 ![note_credential](images/note_credential.png)
 
