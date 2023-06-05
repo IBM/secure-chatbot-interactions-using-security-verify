@@ -165,7 +165,7 @@ Make the below changes for the `openidConnectClient` element and save the file:
 <openidConnectClient id="home"
 		signatureAlgorithm="RS256"
 		httpsRequired="false"    
-		redirectToRPHostAndPort="http://ecomm-portal-chatbot.{{ingress-sub-domain}}/insportal/app"
+		redirectToRPHostAndPort="http://ecomm-portal-chatbot.{{ingress-sub-domain}}/portal/ecomm"
 		clientId="{{clientId}}"
 		clientSecret="{{clientSecret}}"
 		authorizationEndpointUrl="https://{{tenantId}}.verify.ibm.com/v1.0/endpoint/default/authorize"
