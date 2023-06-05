@@ -230,7 +230,7 @@ Embed the chatbot script element before the closing`body` tag.
 ```
 #### 6.2 Deploy E-Commerce Portal application
 On the terminal window, got to the repository folder that we cloned earlier. 
-Go to the directory - `sources/ins-portal-app/src/main/java/com/example/legacy/ecomm/`.
+Go to the directory - `sources/ins-portal-app/src/main/java/com/example/legacy/ecomm`.
 Open the file `ECommAppEndpoint.java`.
 
 Replace the placeholder `{{ingress-sub-domain}}` with the ingress sub domain of the OpenShift cluster you noted earlier. Save the file.
